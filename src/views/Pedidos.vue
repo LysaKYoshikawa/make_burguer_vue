@@ -13,7 +13,7 @@ import Banner from '../components/Banner'
 import BurgerForm from '../components/BurgerForm'
 
 export default {
-  name: 'Home',
+  name: 'Pedido',
   components: {
     Banner,
     BurgerForm

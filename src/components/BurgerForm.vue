@@ -3,27 +3,27 @@
   <div>
     <form id="burger-form" method="POST" @submit="createBurger">
       <div class="input-container">
-        <label for="nome">Nome do cliente:</label>
-        <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite o seu nome">
+        <label for="name">Nome do cliente:</label>
+        <input type="text" id="name" name="name" v-model="name" placeholder="Digite o seu nome">
       </div>
       <div class="input-container">
-        <label for="pao">Escolha o pão:</label>
-        <select name="pao" id="pao" v-model="pao">
+        <label for="bread">Escolha o pão:</label>
+        <select name="bread" id="bread" v-model="bread">
           <option value="">Selecione o seu pão</option>
-          <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">{{ pao.tipo }}</option>
+          <option v-for="bread in paes" :key="bread.id" :value="bread.tipo">{{ bread.tipo }}</option>
         </select>
       </div>
       <div class="input-container">
-        <label for="carne">Escolha a carne do seu Burger:</label>
-        <select name="carne" id="carne" v-model="carne">
+        <label for="beef">Escolha a carne do seu Burger:</label>
+        <select name="beef" id="beef" v-model="beef">
           <option value="">Selecione o tipo de carne</option>
-          <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo">{{ carne.tipo }}</option>
+          <option v-for="beef in beefs" :key="beef.id" :value="beef.tipo">{{ beef.tipo }}</option>
         </select>
       </div>
-      <div id="opcionais-container" class="input-container">
-        <label id="opcionais-title" for="opcionais">Selecione os opcionais:</label>
-        <div class="checkbox-container" v-for="opcional in opcionaisdata" :key="opcional.id">
-          <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.tipo">
+      <div id="optional-container" class="input-container">
+        <label id="optional-title" for="optional">Selecione os optional:</label>
+        <div class="checkbox-container" v-for="opcional in optionaldata" :key="opcional.id">
+          <input type="checkbox" name="optional" v-model="optional" :value="opcional.tipo">
           <span>{{ opcional.tipo }}</span>
         </div>
       </div>
@@ -43,11 +43,11 @@ export default {
     return {
       paes: null,
       carnes: null,
-      opcionaisdata: null,
-      nome: null,
+      optionaldata: null,
+      name: null,
       pao: null,
       carne: null,
-      opcionais: [],
+      optional: [],
       status: "Solicitado",
       msg: null
     }
@@ -59,17 +59,17 @@ export default {
 
       this.paes = data.paes
       this.carnes = data.carnes
-      this.opcionaisdata = data.opcionais
+      this.optionaldata = data.optional
     },
     async createBurger(e) {
 
       e.preventDefault()
 
       const data = {
-        nome: this.nome,
+        name: this.name,
         carne: this.carne,
         pao: this.pao,
-        opcionais: Array.from(this.opcionais),
+        optional: Array.from(this.optional),
         status: "Solicitado"
       }
 
@@ -91,10 +91,10 @@ export default {
       setTimeout(() => this.msg = "", 3000)
 
       // limpar campos
-      this.nome = ""
+      this.name = ""
       this.carne = ""
       this.pao = ""
-      this.opcionais = []
+      this.optional = []
       
     }
   },
@@ -132,12 +132,12 @@ export default {
     width: 300px;
   }
 
-  #opcionais-container {
+  #optional-container {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  #opcionais-title {
+  #optional-title {
     width: 100%;
   }
 
