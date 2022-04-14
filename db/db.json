@@ -1,6 +1,6 @@
 {
   "ingredientes": {
-    "paes": [
+    "breads": [
       {
         "id": 1,
         "tipo": "Italiano Branco"
@@ -16,9 +16,13 @@
       {
         "id": 4,
         "tipo": "Integral"
+      },
+      {
+        "id": 5,
+        "tipo": "Pão português"
       }
     ],
-    "carnes": [
+    "meats": [
       {
         "id": 1,
         "tipo": "Maminha"
@@ -36,7 +40,7 @@
         "tipo": "Veggie burger"
       }
     ],
-    "opcionais": [
+    "options": [
       {
         "id": 1,
         "tipo": "Bacon"
@@ -79,45 +83,77 @@
   ],
   "burgers": [
     {
-      "nome": "Monalysa Yoshikawa",
-      "carne": "Picanha",
-      "pao": "Italiano Branco",
-      "opcionais": [
+      "name": "Jones",
+      "beef": "Alcatra",
+      "bread": "3 Queijos",
+      "options": [
         "Bacon",
-        "Salame",
-        "Cebola roxa"
+        "Cheddar"
       ],
-      "status": "Finalizado",
+      "status": "Em produção",
       "id": 1
     },
     {
-      "nome": "João Coelho",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [
+      "name": "Sirius",
+      "beef": "Picanha",
+      "bread": "3 Queijos",
+      "options": [
+        "Bacon",
         "Salame",
-        "Cebola roxa"
+        "Cebola roxa",
+        "Cheddar",
+        "Tomate",
+        "Pepino"
       ],
       "status": "Solicitado",
       "id": 4
     },
     {
-      "nome": null,
-      "carne": null,
-      "pao": null,
-      "opcionais": [],
+      "name": "Banguela",
+      "beef": "Picanha",
+      "bread": "Italiano Branco",
+      "options": [
+        "Bacon",
+        "Tomate",
+        "Pepino"
+      ],
       "status": "Solicitado",
       "id": 5
     },
     {
-      "nome": "Monalysa yoshikawa",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon"
+      "name": "Taco",
+      "beef": "",
+      "bread": "Parmesão e Orégano",
+      "options": [
+        "Salame",
+        "Cebola roxa"
       ],
       "status": "Solicitado",
       "id": 6
+    },
+    {
+      "name": "Perola",
+      "beef": "Veggie burger",
+      "bread": "Integral",
+      "options": [
+        "Tomate",
+        "Pepino",
+        "Cebola roxa"
+      ],
+      "status": "Solicitado",
+      "id": 7
+    },
+    {
+      "name": "Felicia",
+      "beef": "Picanha",
+      "bread": "3 Queijos",
+      "options": [
+        "Bacon",
+        "Tomate",
+        "Pepino"
+      ],
+      "status": "Solicitado",
+      "id": 8
     }
   ]
 }
